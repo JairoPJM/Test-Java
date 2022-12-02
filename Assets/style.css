@@ -5,8 +5,5 @@
     bottom: -50px;
     border-style: none;
     font-size: larger;
-}
-.column {
-    width: 80%;
-    height: 80%;
+    border-style: none;
 }
