@@ -1,13 +1,38 @@
 *{
     border-style: none ;
 }
+body {
+    overflow-x: hidden;
+}
 .column .callout{
-    bottom: -50px;
     border-style: none;
     font-size: larger;
     border-style: none;
 }
-.column {
-    width: 80%;
+.space {
+    height: 10rem;
+}
+
+.box {
+    width: 100%;
     height: 80%;
+    margin-top: 1rem;
+}
+
+
+.container {
+    width: 100vw;
+    height: 80vh;
+}
+
+.larger {
+    font-size: 200px;
+}
+
+.grid-container {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 }
