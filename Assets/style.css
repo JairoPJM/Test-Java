@@ -5,8 +5,9 @@
     bottom: -50px;
     border-style: none;
     font-size: larger;
+    border-style: none;
 }
-.box {
+.column {
     width: 80%;
     height: 80%;
 }
