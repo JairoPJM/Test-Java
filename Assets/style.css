@@ -1,0 +1,12 @@
+*{
+    border-style: none ;
+}
+.column .callout{
+    bottom: -50px;
+    border-style: none;
+    font-size: larger;
+}
+.column {
+    width: 80%;
+    height: 80%;
+}
