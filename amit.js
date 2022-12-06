@@ -64,9 +64,33 @@ function getLocation(city,state) {
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data)
+        console.log(data[0].lat)
+        console.log(data[0].lon)
+        function getWalkScore() {
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '3b327d0059msha07f2e8b5e08905p13aff9jsna9d2b3f3d9f3',
+                    'X-RapidAPI-Host': 'walk-score.p.rapidapi.com'
+                }
+            };
+            var lat = data[0].lat
+            var lon = data[0].lon
+            var key = 'abda595364afb8f553e850e39711ae84'
+            var address = inputArr[0].trim()+'%2C%20' + inputArr[1].trim()
+            fetch('https://walk-score.p.rapidapi.com/score?lat=' + lat +'&address='+ address + '&wsapikey='+ key + '&lon='+ lon, options)
+            .then(response => response.text())
+            .then(data => {
+                console.log(data)
+                var dataJSON = parseFloat(data)
+                console.log(dataJSON.walkScore)
+            })
+            .catch(err => console.error(err));
+        }
+        getWalkScore();
     })
-    .catch(function(){
-    });
+    .catch(function() {
+    })
 }
-getLocation();
+getLocation()
 });
