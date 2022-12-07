@@ -66,31 +66,47 @@ function getLocation(city,state) {
         console.log(data)
         console.log(data[0].lat)
         console.log(data[0].lon)
-        function getWalkScore() {
+        function getCrime() {
             const options = {
                 method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': '3b327d0059msha07f2e8b5e08905p13aff9jsna9d2b3f3d9f3',
-                    'X-RapidAPI-Host': 'walk-score.p.rapidapi.com'
+                headers: 
+                {
+                    'x-api-key': 'k3RAzKN1Ag14xTPlculT39RZb38LGgsG8n27ZycG'
                 }
             };
-            var lat = data[0].lat
-            var lon = data[0].lon
-            var key = 'abda595364afb8f553e850e39711ae84'
-            var address = inputArr[0].trim()+'%2C%20' + inputArr[1].trim()
-            fetch('https://walk-score.p.rapidapi.com/score?lat=' + lat +'&address='+ address + '&wsapikey='+ key + '&lon='+ lon, options)
-            .then(response => response.text())
-            .then(data => {
-                console.log(data)
-                var dataJSON = parseFloat(data)
-                console.log(dataJSON.walkScore)
-            })
-            .catch(err => console.error(err));
+            var lat = data[0].lat;
+            var long = data[0].lon
+            fetch('https://api.crimeometer.com/v1/incidents/raw-data?lat='+lat+'&lon='+long+'&distance=10mi&datetime_ini=2020-01-01T11:33:54.000Z&datetime_end=2022-12-01T11:33:54.000Z&page=1',options)
+                .then(response => response.json())
+                .then(response => console.log(response))
+                .catch(err => console.error(err));
         }
-        getWalkScore();
-    })
-    .catch(function() {
-    })
+getCrime()
+})
+.catch(function() {
+})
 }
 getLocation()
 });
+// function getWalkScore() {
+//     const options = {
+//         method: 'GET',
+//         headers: {
+//             'X-RapidAPI-Key': '3b327d0059msha07f2e8b5e08905p13aff9jsna9d2b3f3d9f3',
+//             'X-RapidAPI-Host': 'walk-score.p.rapidapi.com'
+//         }
+//     };
+//     var lat = data[0].lat
+//     var lon = data[0].lon
+//     var key = 'abda595364afb8f553e850e39711ae84'
+//     var address = inputArr[0].trim()+'%2C%20' + inputArr[1].trim()
+//     fetch('https://walk-score.p.rapidapi.com/score?lat=' + lat +'&address='+ address + '&wsapikey='+ key + '&lon='+ lon, options)
+//     .then(response => response.text())
+//     .then(data => {
+//         console.log(data)
+//         var dataJSON = parseFloat(data)
+//         console.log(dataJSON.walkScore)
+//     })
+//     .catch(err => console.error(err));
+// }
+// getWalkScore();
