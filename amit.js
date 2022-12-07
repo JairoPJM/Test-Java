@@ -1,53 +1,3 @@
-// public class Main {
-
-//     public static void main(String[] args) {
-
-//         // if statement = performs a block of code if it's condition evaluates to be true
-
-//         int age = 75;
-
-//         if(age==75) {
-//             System.out.println("Ok Boomer!");
-//         }
-//         else if(age>=18) {
-//             System.out.println("You are an adult!");
-//         }
-//         else if(age>=13) {
-//             System.out.println("You are a teenager!");
-//         }
-//         else {
-//             System.out.println("You are not an adult!");
-//         }
-
-//     }
-// }
-
-// var btn = document.getElementById('click')
-
-// function getAPI() {
-//     $.ajaxSetup({
-//         url: "https://api.walkscore.com" + ajax.data
-//     });
-//     $.ajax({data: {
-//         address : '1119 8th Ave S, Seattle, WA,',
-//         lat : '47.6085',
-//         lon : '-122.3295',
-//         wsapikey : 'abda595364afb8f553e850e39711ae84',
-//     }})
-
-// fetch(url, {
-//     method: 'GET',
-//     mode: 'no-cors',
-//     credentials: 'same-origin',
-// })
-// .then(function (response) {
-//     return response.json()
-// })
-// .then(function (data) {
-//     console.log(data);
-// });
-// }
-// btn.addEventListener('click', getAPI)
 $('#form').submit( function(e) {
     e.preventDefault();
     var input = $('#search').val();
@@ -81,7 +31,7 @@ function getLocation(city,state) {
                 .then(response => console.log(response))
                 .catch(err => console.error(err));
         }
-getCrime()
+getCrime();
 })
 .catch(function() {
 })
