@@ -9,11 +9,6 @@ body {
     font-size: larger;
     border-style: none;
 }
-<<<<<<< HEAD
-.column {
-    width: 80%;
-    
-=======
 .space {
     height: 10rem;
 }
@@ -40,5 +35,4 @@ body {
     align-items: center;
     justify-content: center;
     width: 100vw;
->>>>>>> bd9419e0228e2f07a19570827dd9e02a49fd311f
 }
