@@ -10,7 +10,7 @@ function getLocation(city,state) {
     var city = inputArr[0];
     var state = inputArr[1];
     var country = '';
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+city+','+ state +','+country + '&limit=5&appid=' + key)
+    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ city +','+ state +','+country + '&limit=5&appid=' + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data)
