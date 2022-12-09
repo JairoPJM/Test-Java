@@ -36,3 +36,10 @@ body {
     justify-content: center;
     width: 100vw;
 }
+button {
+    font-size: 300px;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}

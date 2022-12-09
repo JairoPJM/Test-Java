@@ -51,17 +51,17 @@
 
   <div class="medium-5 large-6 columns">
     <div class="callout secondary">
-      <form>
+      <form id="form">
         <div class="row">
           <div class="small-12 columns">
             <label>Find homes
-              <input type="text" placeholder="City, Address, County, Zip">
+              <input type="text" placeholder="City, State" id="search">
             </label>
           </div>
           <div class="small-12 columns">
             <label>
             </label>
-            <button type="submit" class="button">Search Now!</button>
+            <button type="submit" class="button" id="submitBtn">Search Now!</button>
           </div>
         </div>
       </form>
@@ -104,6 +104,7 @@
   <div class="column larger">
       <p><img src="Assets/pictures/201006085537-01-worlds-coolest-neighborhoods-photos-2020.jpeg" alt="image of a planet called Pegasi B"></p>
   </div>
+  <div id="map"></div>
   <footer class="footer">
     <article class="grid-container">
       <div class="row column">
@@ -117,10 +118,10 @@
     </article>
   </footer>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+defer></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <script src="amit.js"></script>
   </body>
 </html>
