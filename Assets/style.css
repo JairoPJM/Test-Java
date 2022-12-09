@@ -42,5 +42,8 @@ button {
 
 .responsive-blog-post{
     padding-left: 25px;
-    
+}
+#map {
+    height: 100%;
+    width: 100%;
 }

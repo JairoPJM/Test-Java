@@ -6,8 +6,10 @@
     <title>Neighborhood Watch Page</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="./Assets/style.css">
+    <script src=https://api.crimeometer.com/v1/incidents/raw-data?lat={latitude}&lon={longitude}&datetime_ini={datetime_ini}&datetime_end={datetime_end}&distance={distance}></script>
   </head>
   <body>
+
 
 <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
   <button class="menu-icon" type="button" data-toggle></button>
@@ -29,6 +31,7 @@
   <div class="top-bar-right">
     <ul class="menu">
       <li><a href="#">My Account</a></li>
+      <li><a href="register.html">Register</a></li>
       <li><a class="button">Login</a></li>
     </ul>
   </div>
@@ -52,7 +55,7 @@
         <div class="row">
           <div class="small-12 columns">
             <label>Find homes
-              <input type="text" placeholder="City, Address, County, Zip" id="search">
+              <input type="text" placeholder="City, State" id="search">
             </label>
           </div>
           <div class="small-12 columns">
@@ -101,9 +104,7 @@
   <div class="column larger">
       <p><img src="Assets/pictures/201006085537-01-worlds-coolest-neighborhoods-photos-2020.jpeg" alt="image of a planet called Pegasi B"></p>
   </div>
-  <div id="walk-menu">
-    <button id="click">click</button>
-  </div>
+  <div id="map"></div>
   <footer class="footer">
     <article class="grid-container">
       <div class="row column">
@@ -117,6 +118,8 @@
     </article>
   </footer>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+defer></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="amit.js"></script>
