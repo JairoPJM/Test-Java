@@ -4,6 +4,7 @@ $('#form').submit( function(e) {
     var inputArr = input.split(',')
     console.log(inputArr)
     var inputAbbr = inputArr[1].trim()
+    //limit format to abbreviated state
     if (inputAbbr.length != 2) {
         window.alert("Please enter state in abbreviation format!" + "EX: GA")
         return 
@@ -12,6 +13,8 @@ $('#form').submit( function(e) {
         input.val() = "Atlanta, GA"
     }
     $('#block').addClass('hide')
+    $('#randomizer').removeClass('hide')
+    //get latitude and longitude of desired city
 function getLocation(city,state) {
     var key = 'b5d6abd64c1bcaf907e06b633fed6528';
     var city = inputArr[0];
@@ -31,6 +34,7 @@ function getLocation(city,state) {
             });
         }
         window.initMap = initMap();
+        //get restaurants with desired city
         function getRestaurants (){
             const options = {
                 method: 'GET',
@@ -41,29 +45,34 @@ function getLocation(city,state) {
             };
             var state = inputArr[1].trim();
             var city = inputArr[0].trim();
-            fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/'+ state +'/city/'+ city + '/4', options)
+            fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/'+ state +'/city/'+ city + '/2', options)
             .then(response => response.json())
             .then(response => {
                 console.log(response)
                 console.log(parseFloat(response.restaurants[0].latitude))
+                //creating 10 nearest restaurants
                 const restaurants = [
-                    [{ lat: parseFloat(response.restaurants[0].latitude), lng: parseFloat(response.restaurants[0].longitude) }, response.restaurants[0].restaurantName, response.restaurants[0].address],
-                    [{ lat: parseFloat(response.restaurants[1].latitude), lng: parseFloat(response.restaurants[1].longitude) }, response.restaurants[1].restaurantName, response.restaurants[1].address],
-                    [{ lat: parseFloat(response.restaurants[2].latitude), lng: parseFloat(response.restaurants[2].longitude) }, response.restaurants[2].restaurantName, response.restaurants[2].address],
-                    [{ lat: parseFloat(response.restaurants[3].latitude), lng: parseFloat(response.restaurants[3].longitude) }, response.restaurants[3].restaurantName, response.restaurants[3].address],
-                    [{ lat: parseFloat(response.restaurants[4].latitude), lng: parseFloat(response.restaurants[4].longitude) }, response.restaurants[4].restaurantName, response.restaurants[4].address],
-                    [{ lat: parseFloat(response.restaurants[5].latitude), lng: parseFloat(response.restaurants[5].longitude) }, response.restaurants[5].restaurantName, response.restaurants[5].address],
-                    [{ lat: parseFloat(response.restaurants[6].latitude), lng: parseFloat(response.restaurants[6].longitude) }, response.restaurants[6].restaurantName, response.restaurants[6].address],
-                    [{ lat: parseFloat(response.restaurants[7].latitude), lng: parseFloat(response.restaurants[7].longitude) }, response.restaurants[7].restaurantName, response.restaurants[7].address],
-                    [{ lat: parseFloat(response.restaurants[8].latitude), lng: parseFloat(response.restaurants[8].longitude) }, response.restaurants[8].restaurantName, response.restaurants[8].address],
-                    [{ lat: parseFloat(response.restaurants[9].latitude), lng: parseFloat(response.restaurants[9].longitude) }, response.restaurants[9].restaurantName, response.restaurants[9].address],
+                    [{ lat: parseFloat(response.restaurants[0].latitude), lng: parseFloat(response.restaurants[0].longitude) }, response.restaurants[0].restaurantName, response.restaurants[0].address, response.restaurants[0].cuisineType, response.restaurants[0].phone],
+                    [{ lat: parseFloat(response.restaurants[1].latitude), lng: parseFloat(response.restaurants[1].longitude) }, response.restaurants[1].restaurantName, response.restaurants[1].address, response.restaurants[1].cuisineType, response.restaurants[1].phone],
+                    [{ lat: parseFloat(response.restaurants[2].latitude), lng: parseFloat(response.restaurants[2].longitude) }, response.restaurants[2].restaurantName, response.restaurants[2].address, response.restaurants[2].cuisineType, response.restaurants[2].phone],
+                    [{ lat: parseFloat(response.restaurants[3].latitude), lng: parseFloat(response.restaurants[3].longitude) }, response.restaurants[3].restaurantName, response.restaurants[3].address, response.restaurants[3].cuisineType, response.restaurants[3].phone],
+                    [{ lat: parseFloat(response.restaurants[4].latitude), lng: parseFloat(response.restaurants[4].longitude) }, response.restaurants[4].restaurantName, response.restaurants[4].address, response.restaurants[4].cuisineType, response.restaurants[4].phone],
+                    [{ lat: parseFloat(response.restaurants[5].latitude), lng: parseFloat(response.restaurants[5].longitude) }, response.restaurants[5].restaurantName, response.restaurants[5].address, response.restaurants[5].cuisineType, response.restaurants[5].phone],
+                    [{ lat: parseFloat(response.restaurants[6].latitude), lng: parseFloat(response.restaurants[6].longitude) }, response.restaurants[6].restaurantName, response.restaurants[6].address, response.restaurants[6].cuisineType, response.restaurants[6].phone],
+                    [{ lat: parseFloat(response.restaurants[7].latitude), lng: parseFloat(response.restaurants[7].longitude) }, response.restaurants[7].restaurantName, response.restaurants[7].address, response.restaurants[7].cuisineType, response.restaurants[7].phone],
+                    [{ lat: parseFloat(response.restaurants[8].latitude), lng: parseFloat(response.restaurants[8].longitude) }, response.restaurants[8].restaurantName, response.restaurants[8].address, response.restaurants[8].cuisineType, response.restaurants[8].phone],
+                    [{ lat: parseFloat(response.restaurants[9].latitude), lng: parseFloat(response.restaurants[9].longitude) }, response.restaurants[9].restaurantName, response.restaurants[9].address, response.restaurants[9].cuisineType, response.restaurants[9].phone],
                 ];
+                //randomizing restaurants
                     var random = document.getElementById('random')
                     function randomR(){
                         $('#randomized').empty()
                         var rnd = Math.floor(Math.random()*7) + 0
                         console.log(rnd)
-                        $('#randomized').append(`<h1>${restaurants[rnd][1]}</h1><br /><h1>${restaurants[rnd][2]}</h1><br/>`) 
+                        $('#randomized').append(`<h1>${restaurants[rnd][1]}</h1><br />
+                                                <h1><a link='address'>${restaurants[rnd][2]}</a></h1><br />
+                                                <h1>${restaurants[rnd][3]}</h1><br />
+                                                <h1><a>${restaurants[rnd][4]}</a></h1>`) 
                     }
                     random.addEventListener("click", randomR)
                 const infoWindow = new google.maps.InfoWindow();
