@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeighborhoodEats</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="./Assets/style.css">
+  </head>
+  <body>
+
+
+<div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="realEstateMenu">
+  <div class="top-bar-left">
+    <ul class="menu" data-responsive-menu="accordion">
+      <li class="menu-text">NeighborhoodEats</li>
+      <li><a href="map.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="#">My Account</a></li>
+      <li><a href="signup.html">Register</a></li>
+      <li><a class="button">Login</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /Navigation -->
+
+<br>
+<!-- Main header -->
+<div class="row">
+  <div class="medium-8 large-6 columns">
+    <h1>Find restaurants</h1>
+    <p class="subheader">Enter a city and state and we can randomize a restaurant for you to try!</p>
+  </div>
+  <div class="medium-5 large-6 columns">
+    <div class="callout secondary">
+      <form id="form">
+        <div class="row">
+          <div class="small-12 columns">
+            <label>Restaurant Randomizer
+              <input type="text" placeholder="City, State" id="search">
+            </label>
+          </div>
+          <div class="small-12 columns">
+            <label>
+            </label>
+            <button type="submit" class="button" id="submitBtn">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- -->
+
+  <div id="map"></div>
+  <br>
+  <footer class="footer">
+    <article class="grid-container">
+      <div class="row column">
+        <ul class="menu text-center">
+          <li><a href="#">FB</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Mi casa</a></li>
+        </ul>
+      </div>
+    </article>
+  </footer>
+</div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="amit.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+defer></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

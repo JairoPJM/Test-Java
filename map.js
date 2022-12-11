@@ -3,14 +3,12 @@ $('#form').submit( function(e) {
     var input = $('#search').val();
     var inputArr = input.split(',')
     console.log(inputArr)
-
-
 function getLocation(city,state) {
     var key = 'b5d6abd64c1bcaf907e06b633fed6528';
     var city = inputArr[0];
     var state = inputArr[1];
     var country = '';
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+city+','+ state +','+country + '&limit=5&appid=' + key)
+    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ city +','+ state +','+country + '&limit=5&appid=' + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data)
