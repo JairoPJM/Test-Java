@@ -1,4 +1,3 @@
-
 $('#form').submit( function(e) {
     e.preventDefault();
     var input = $('#search').val();
@@ -21,17 +20,15 @@ function getLocation(city,state) {
     var city = inputArr[0];
     var state = inputArr[1];
     var country = '';
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+city+','+ state +','+country + '&limit=5&appid=' + key)
+    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ city +','+ state +','+country + '&limit=5&appid=' + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data)
         console.log(data[0].lat)
         console.log(data[0].lon)
-
         let map
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-
                 center: { lat: data[0].lat, lng: data[0].lon},
                 zoom:12,
             });
@@ -79,13 +76,7 @@ function getLocation(city,state) {
                     }
                     random.addEventListener("click", randomR)
                 const infoWindow = new google.maps.InfoWindow();
-                
                 restaurants.forEach(([position, title, address], i) => {
-                    postionArr.push(position)
-                    console.log(position)
-                    var result=Math.floor(Math.random()*postionArr.length)
-                    var x=postionArr[result]
-                    console.log(x)
                     const marker = new google.maps.Marker( {
 
                         position,
