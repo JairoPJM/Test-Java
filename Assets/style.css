@@ -4,11 +4,13 @@
 body {
     overflow-x: hidden;
 }
+
 .column .callout{
     border-style: none;
     font-size: larger;
     border-style: none;
 }
+
 .space {
     height: 10rem;
 }
@@ -36,9 +38,11 @@ body {
     justify-content: center;
     width: 100vw;
 }
+
 button {
     font-size: 300px;
 }
+
 #map {
     height: 100%;
     width: 100%;

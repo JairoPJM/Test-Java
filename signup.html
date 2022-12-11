@@ -2,17 +2,70 @@
 <html>
 <head>
     <title>Login And Registration Form</title>
-    <link rel="stylesheet" href="./Assets/style2.css">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./Assets/style2.css"> 
 </head>
+
 <body>
-    <div class="container">
+   
+
+    <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      <div class="top-bar" id="realEstateMenu">
+        <div class="top-bar-left">
+          <ul class="menu" data-responsive-menu="accordion">
+            <li class="menu-text">Neighborhood Watch</li>
+            <li><a href="#crime-Map-menu">Crime Map</a></li>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a class="sign" href="signup.html">My Account</a></li>
+            <li><a class="sign" href="signup.html">Register</a></li>
+            <li><a class="sign" href="signup.html">Login</a></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container1">
         <div class="card">
             <div class="inner-box" id="card">
                 <div class="card-front">
                     <h2>LOGIN</h2>
-                    <form>
-                        <input type="email" class="input-box" placeholder="Your Email Id" required>
-                        <input type="password" class="input-box" placeholder="Password" required>
+                    <ul id="signup"></ul>
+                    <form onsubmit="signup()">
+                        <input type="email" class="input-box" placeholder="Your Email Id" id="email" required>
+                        <input type="password" class="input-box" placeholder="Password" id="password" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -21,10 +74,10 @@
                 </div>
                     <div class="card-back">
                         <h2>REGISTER</h2>
-                    <form>
-                        <input type="text" class="input-box" placeholder="Your Name" required>
-                        <input type="email" class="input-box" placeholder="Your Email Id" required>
-                        <input type="password" class="input-box" placeholder="Password" required>
+                    <form onsubmit="signup()">
+                        <input type="text" class="input-box" placeholder="Your Name" id="username" required>
+                        <input type="email" class="input-box" placeholder="Your Email Id" id="email" required>
+                        <input type="password" class="input-box" placeholder="Password" id="password" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -50,6 +103,8 @@
 
     </script>
 
+
+<script src="./Assets/signup.js"></script>
 
 </body>
 </html>
