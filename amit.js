@@ -52,16 +52,16 @@ function getLocation(city,state) {
                 console.log(parseFloat(response.restaurants[0].latitude))
                 //creating 10 nearest restaurants
                 const restaurants = [
-                    [{ lat: parseFloat(response.restaurants[0].latitude), lng: parseFloat(response.restaurants[0].longitude) }, response.restaurants[0].restaurantName, response.restaurants[0].address, response.restaurants[0].cuisineType, response.restaurants[0].phone],
-                    [{ lat: parseFloat(response.restaurants[1].latitude), lng: parseFloat(response.restaurants[1].longitude) }, response.restaurants[1].restaurantName, response.restaurants[1].address, response.restaurants[1].cuisineType, response.restaurants[1].phone],
-                    [{ lat: parseFloat(response.restaurants[2].latitude), lng: parseFloat(response.restaurants[2].longitude) }, response.restaurants[2].restaurantName, response.restaurants[2].address, response.restaurants[2].cuisineType, response.restaurants[2].phone],
-                    [{ lat: parseFloat(response.restaurants[3].latitude), lng: parseFloat(response.restaurants[3].longitude) }, response.restaurants[3].restaurantName, response.restaurants[3].address, response.restaurants[3].cuisineType, response.restaurants[3].phone],
-                    [{ lat: parseFloat(response.restaurants[4].latitude), lng: parseFloat(response.restaurants[4].longitude) }, response.restaurants[4].restaurantName, response.restaurants[4].address, response.restaurants[4].cuisineType, response.restaurants[4].phone],
-                    [{ lat: parseFloat(response.restaurants[5].latitude), lng: parseFloat(response.restaurants[5].longitude) }, response.restaurants[5].restaurantName, response.restaurants[5].address, response.restaurants[5].cuisineType, response.restaurants[5].phone],
-                    [{ lat: parseFloat(response.restaurants[6].latitude), lng: parseFloat(response.restaurants[6].longitude) }, response.restaurants[6].restaurantName, response.restaurants[6].address, response.restaurants[6].cuisineType, response.restaurants[6].phone],
-                    [{ lat: parseFloat(response.restaurants[7].latitude), lng: parseFloat(response.restaurants[7].longitude) }, response.restaurants[7].restaurantName, response.restaurants[7].address, response.restaurants[7].cuisineType, response.restaurants[7].phone],
-                    [{ lat: parseFloat(response.restaurants[8].latitude), lng: parseFloat(response.restaurants[8].longitude) }, response.restaurants[8].restaurantName, response.restaurants[8].address, response.restaurants[8].cuisineType, response.restaurants[8].phone],
-                    [{ lat: parseFloat(response.restaurants[9].latitude), lng: parseFloat(response.restaurants[9].longitude) }, response.restaurants[9].restaurantName, response.restaurants[9].address, response.restaurants[9].cuisineType, response.restaurants[9].phone],
+                    [{ lat: parseFloat(response.restaurants[0].latitude), lng: parseFloat(response.restaurants[0].longitude), type: "dining" }, response.restaurants[0].restaurantName, response.restaurants[0].address, response.restaurants[0].cuisineType, response.restaurants[0].phone],
+                    [{ lat: parseFloat(response.restaurants[1].latitude), lng: parseFloat(response.restaurants[1].longitude), type: "dining" }, response.restaurants[1].restaurantName, response.restaurants[1].address, response.restaurants[1].cuisineType, response.restaurants[1].phone],
+                    [{ lat: parseFloat(response.restaurants[2].latitude), lng: parseFloat(response.restaurants[2].longitude), type: "dining" }, response.restaurants[2].restaurantName, response.restaurants[2].address, response.restaurants[2].cuisineType, response.restaurants[2].phone],
+                    [{ lat: parseFloat(response.restaurants[3].latitude), lng: parseFloat(response.restaurants[3].longitude), type: "dining" }, response.restaurants[3].restaurantName, response.restaurants[3].address, response.restaurants[3].cuisineType, response.restaurants[3].phone],
+                    [{ lat: parseFloat(response.restaurants[4].latitude), lng: parseFloat(response.restaurants[4].longitude), type: "dining" }, response.restaurants[4].restaurantName, response.restaurants[4].address, response.restaurants[4].cuisineType, response.restaurants[4].phone],
+                    [{ lat: parseFloat(response.restaurants[5].latitude), lng: parseFloat(response.restaurants[5].longitude), type: "dining" }, response.restaurants[5].restaurantName, response.restaurants[5].address, response.restaurants[5].cuisineType, response.restaurants[5].phone],
+                    [{ lat: parseFloat(response.restaurants[6].latitude), lng: parseFloat(response.restaurants[6].longitude), type: "dining" }, response.restaurants[6].restaurantName, response.restaurants[6].address, response.restaurants[6].cuisineType, response.restaurants[6].phone],
+                    [{ lat: parseFloat(response.restaurants[7].latitude), lng: parseFloat(response.restaurants[7].longitude), type: "dining" }, response.restaurants[7].restaurantName, response.restaurants[7].address, response.restaurants[7].cuisineType, response.restaurants[7].phone],
+                    [{ lat: parseFloat(response.restaurants[8].latitude), lng: parseFloat(response.restaurants[8].longitude), type: "dining" }, response.restaurants[8].restaurantName, response.restaurants[8].address, response.restaurants[8].cuisineType, response.restaurants[8].phone],
+                    [{ lat: parseFloat(response.restaurants[9].latitude), lng: parseFloat(response.restaurants[9].longitude), type: "dining" }, response.restaurants[9].restaurantName, response.restaurants[9].address, response.restaurants[9].cuisineType, response.restaurants[9].phone],
                 ];
                 //randomizing restaurants
                     var random = document.getElementById('random')
@@ -75,12 +75,20 @@ function getLocation(city,state) {
                                                 <h1><a>${restaurants[rnd][4]}</a></h1>`) 
                     }
                     random.addEventListener("click", randomR)
+                const iconBase = "http://maps.google.com/mapfiles/kml/pal2";
+                const icons = {
+                    dining: {
+                        icon: iconBase + "icon55.png"
+                    }
+                };
+                
                 const infoWindow = new google.maps.InfoWindow();
                 restaurants.forEach(([position, title, address], i) => {
                     const marker = new google.maps.Marker( {
 
                         position,
                         map,
+                        icon: icons[restaurants[i][0].type],
                         title: `${i + 1}. ${title} <br />   ${address}`,
                         label: `${i + 1}`,
                         optimized: false,
