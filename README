@@ -1,0 +1,11 @@
+# NEIGHBORHOOD EATS
+
+## DESCRIPTION
+API - Openweather Geocoder, Google Maps, Restaurants near me USA
+input -> geocode -> latitude & longitude
+creates google maps location
+city and state input returns 10 restaurants
+restaurants are inputted into an array
+reverse geocoded as markers onto google maps
+random button shuffles through the restaurant array to output one specific restaurant
+    
