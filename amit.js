@@ -79,7 +79,6 @@ function getLocation(city,state) {
                     }
                     // var map=$("#map")
                     random.addEventListener("click", randomR,)
-                    random.addEventListener("click", function(){mapSection.hidden=true})
                 const infoWindow = new google.maps.InfoWindow();
                 restaurants.forEach(([position, title, address], i) => {
                     const marker = new google.maps.Marker( {
