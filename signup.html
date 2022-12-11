@@ -10,9 +10,9 @@
             <div class="inner-box" id="card">
                 <div class="card-front">
                     <h2>LOGIN</h2>
-                    <form>
-                        <input type="email" class="input-box" placeholder="Your Email Id" required>
-                        <input type="password" class="input-box" placeholder="Password" required>
+                    <form id="login" action="next_page.php" method="post">
+                        <input type="email" id="userEmail" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" id="userPassword" class="input-box" placeholder="Password" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -21,10 +21,10 @@
                 </div>
                     <div class="card-back">
                         <h2>REGISTER</h2>
-                    <form>
-                        <input type="text" class="input-box" placeholder="Your Name" required>
-                        <input type="email" class="input-box" placeholder="Your Email Id" required>
-                        <input type="password" class="input-box" placeholder="Password" required>
+                    <form id="register">
+                        <input type="text" id="regName" class="input-box" placeholder="Your Name" required>
+                        <input type="email" id="regEmail" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" id="regPassword" class="input-box" placeholder="Password" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="./signup.js"></script>
 
 
