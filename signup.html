@@ -62,10 +62,16 @@
             <div class="inner-box" id="card">
                 <div class="card-front">
                     <h2>LOGIN</h2>
+<<<<<<< HEAD
                     <ul id="signup"></ul>
                     <form onsubmit="signup()">
                         <input type="email" class="input-box" placeholder="Your Email Id" id="email" required>
                         <input type="password" class="input-box" placeholder="Password" id="password" required>
+=======
+                    <form id="login" action="next_page.php" method="post">
+                        <input type="email" id="userEmail" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" id="userPassword" class="input-box" placeholder="Password" required>
+>>>>>>> df1a9b59975cceb676775201bc6e62d4cf904ce7
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -87,21 +93,8 @@
             </div>
         </div>
     </div>
-
-    <script>
-
-    var card = document.getElementById("card");
-
-    function openRegister(){
-        card.style.transform = "rotateY(-180deg)";
-    }
-
-    function openLogin(){
-        card.style.transform = "rotateY(0deg)";
-    }
-
-
-    </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./signup.js"></script>
 
 
 <script src="./Assets/signup.js"></script>

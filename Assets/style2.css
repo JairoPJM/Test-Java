@@ -41,7 +41,7 @@
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: /*url(./Assets/pictures/images.jpeg)*/ linear-gradient(rgb(2, 120, 255), rgb(2, 120, 255)) ;
+    background-image: linear-gradient(rgb(2, 120, 255), rgb(2, 120, 255)), url(./pictures/images.jpeg);
     padding: 55px;
     box-sizing: border-box;
     backface-visibility: hidden;

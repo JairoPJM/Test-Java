@@ -43,7 +43,34 @@ button {
     font-size: 300px;
 }
 
+.responsive-blog-post{
+    padding-left: 25px;
+}
 #map {
     height: 100%;
     width: 100%;
+}
+
+.hide {
+    display: none;
+}
+.containR {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+}
+.rbtn {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 6px;
+}
+
+.randomCon {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
 }
