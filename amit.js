@@ -1,4 +1,3 @@
-var postionArr=[]
 
 $('#form').submit( function(e) {
     e.preventDefault();
