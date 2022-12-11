@@ -9,8 +9,9 @@ $('#form').submit( function(e) {
         return 
     }
     if (input === null) {
-        input = "Atlanta, GA"
+        input.val() = "Atlanta, GA"
     }
+    $('#block').addClass('hide')
 function getLocation(city,state) {
     var key = 'b5d6abd64c1bcaf907e06b633fed6528';
     var city = inputArr[0];
@@ -57,6 +58,14 @@ function getLocation(city,state) {
                     [{ lat: parseFloat(response.restaurants[8].latitude), lng: parseFloat(response.restaurants[8].longitude) }, response.restaurants[8].restaurantName, response.restaurants[8].address],
                     [{ lat: parseFloat(response.restaurants[9].latitude), lng: parseFloat(response.restaurants[9].longitude) }, response.restaurants[9].restaurantName, response.restaurants[9].address],
                 ];
+                    var random = document.getElementById('random')
+                    function randomR(){
+                        $('#randomized').empty()
+                        var rnd = Math.floor(Math.random()*7) + 0
+                        console.log(rnd)
+                        $('#randomized').append(`<h1>${restaurants[rnd][1]}</h1><br /><h1>${restaurants[rnd][2]}</h1><br/>`) 
+                    }
+                    random.addEventListener("click", randomR)
                 const infoWindow = new google.maps.InfoWindow();
                 restaurants.forEach(([position, title, address], i) => {
                     const marker = new google.maps.Marker( {
@@ -74,35 +83,13 @@ function getLocation(city,state) {
                         infoWindow.open(marker.getMap(), marker);
                     })
                 });
-        })
-                .catch(err => console.error(err));
+            })
+            .catch(err => console.error(err));
         }
         getRestaurants();
     })
-            .catch(function() {
-            })
-        }
-        getLocation()
+    .catch(function() {
+    })
+}
+getLocation()
 });
-        // function getCrime() {
-    
-        //     var myHeaders = new Headers();
-        //     myHeaders.append("x-api-key", "pq48FN3DR39me0W2fG17T4nUrJZD36wJ21sj2KHT");
-            
-            
-        //     var requestOptions = {
-        //       method: 'GET',
-        //       headers: myHeaders,
-        //       redirect: 'follow'
-        //     };
-        //     var lat = data[0].lat;
-        //     var long = data[0].lon
-        //     fetch('https://api.crimeometer.com/v1/incidents/raw-data?lat='+lat+'&lon='+long+'&distance=5mi&datetime_ini=2020-01-01T11:33:54.000Z&datetime_end=2022-12-01T11:33:54.000Z&page=1', requestOptions)
-        //         .then(response => response.json())
-        //         .then(response => {
-        //             console.log(response)
-                    
-        //             // getMarker();
-        //         })
-        //         .catch(err => console.error(err));
-        //     }
