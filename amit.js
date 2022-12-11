@@ -1,5 +1,8 @@
+var mapSection=document.querySelector("#map")
+
 $('#form').submit( function(e) {
     e.preventDefault();
+    mapSection.hidden=false
     var input = $('#search').val();
     var inputArr = input.split(',')
     console.log(inputArr)
@@ -74,7 +77,9 @@ function getLocation(city,state) {
                                                 <h1>${restaurants[rnd][3]}</h1><br />
                                                 <h1><a>${restaurants[rnd][4]}</a></h1>`) 
                     }
-                    random.addEventListener("click", randomR)
+                    // var map=$("#map")
+                    random.addEventListener("click", randomR,)
+                    random.addEventListener("click", function(){mapSection.hidden=true})
                 const infoWindow = new google.maps.InfoWindow();
                 restaurants.forEach(([position, title, address], i) => {
                     const marker = new google.maps.Marker( {
