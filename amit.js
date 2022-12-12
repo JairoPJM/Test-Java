@@ -9,6 +9,7 @@ var randomizedBtn=document.querySelector("#random")
 var randomizedPageSection=document.querySelector("#randomized-page-section")
 
 mainPageBtn.addEventListener("click",function(){
+    location.reload()
     aboutUsSection.hidden=true
     mainPageSection.hidden=false
     randomizedSection.hidden=true
@@ -107,11 +108,10 @@ function getLocation(city,state) {
                         $('#randomized').append(`<h1>${restaurants[rnd][1]}</h1><br />
                                                 <h1><a link='address'>${restaurants[rnd][2]}</a></h1><br />
                                                 <h1>${restaurants[rnd][3]}</h1><br />
-                                                <h1><a>${restaurants[rnd][4]}</a></h1>`) 
-                                                var newR = JSON.stringify(restaurants[rnd])
-                                                localStorage.setItem('r1', newR)
-                                                console.log(newR)
-                                                
+                                                <h1><a>${restaurants[rnd][4]}</a></h1>`)
+                        //input item to local storage
+                        var newR = JSON.stringify(restaurants[rnd])
+                        localStorage.setItem(restaurants[rnd][1], newR)
                     }
                     
                     
