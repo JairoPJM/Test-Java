@@ -15,6 +15,7 @@ mainPageBtn.addEventListener("click",function(){
     mainPageSection.hidden=false
     randomizedSection.hidden=true
     randomizedBtn.hidden=true
+    location.reload()
 
 })
 randomBtn.addEventListener("click",function(){
@@ -28,11 +29,11 @@ aboutUsBtn.addEventListener("click",function(){
     mainPageSection.hidden=true
     aboutUsSection.hidden=false
 })
-randomPageSection.addEventListener("click",function(){
-    console.log("HI!")
-    mainPageSection.hidden=false
-    aboutUsSection.hidden=true
-})
+// randomPageSection.addEventListener("click",function(){
+//     console.log("HI!")
+//     mainPageSection.hidden=false
+//     aboutUsSection.hidden=true
+// })
 
 var mapSection=document.querySelector("#map")
 
