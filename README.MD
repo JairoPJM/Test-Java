@@ -16,7 +16,21 @@ Once the restaurants are located, the user can randomize one specific restaurant
 * To install this code, download the zip file, or use GitHub's guidelines to clone the repository.#
 
 # To Execute File
-* Open in browser    
+* Open in browser   
+
+# pictures
+* Main page of the website 
+
+![](https://user-images.githubusercontent.com/111899130/207146857-88be2cb7-030b-4a5a-97d3-7e6c2e0ab53a.PNG)
+* Page when your city and state is searched
+
+![](Assets/pictures/part%202.PNG)
+* Page when randomized button is clicked
+
+![](Assets/pictures/part%203.PNG)
+* page when you open the about us section
+
+![](Assets/pictures/part%204.PNG)
 
 # Features:
 Two HTML Files
@@ -61,13 +75,4 @@ Brooklynn Stevenson - Signup.html, Style2.css, Signup.js, Signup1.js, & Register
 Minjae Cho - Amit.js, Index.html, Style.css, READ.ME work - Git Hub Project
 Jairo Marcassi - Index.html, Style.css, READ.ME work - Git Hub Project
 
-# pictures
-* Main page of the website
-![](https://user-images.githubusercontent.com/111899130/207146857-88be2cb7-030b-4a5a-97d3-7e6c2e0ab53a.PNG)
-* Page when your city and state is searched
-![](Assets/pictures/part%202.PNG)
-* Page when randomized button is clicked
-![](Assets/pictures/part%203.PNG)
-* page when you open the about us section
-![](Assets/pictures/part%204.PNG)
 
