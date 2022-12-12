@@ -1,8 +1,13 @@
 *{
     border-style: none ;
+
 }
 body {
     overflow-x: hidden;
+    background: transparent\9;
+    background:rgba(255, 255, 255, 0.404);
+    background-image: url("./pictures/menu.jpg");
+    background-size: contain;
 }
 
 .column .callout{
@@ -55,6 +60,7 @@ button {
     display: none;
 }
 .containR {
+    background-color: rgba(255, 255, 255, 0.459);
     text-align: center;
     border: 1px solid black;
     border-radius: 8px;
@@ -73,14 +79,13 @@ button {
     display:flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.562);
 }
 
 .main-img {
-    display: flex;
-    justify-content: center;
     padding: 20px;
-    width: 90%;
-    background-color: rgb(153, 153, 153);
+    width: 100%;
+    /* background-color: rgb(180, 179, 179); */
 }
 .img-size {
     width: 70vw;
@@ -90,4 +95,21 @@ button {
 .contain {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.img-header{
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, 0.452);
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.363);
+    background-size: 67vw;
+    background-repeat: no-repeat;
+    opacity: 95%;
+}
+
+.textColor {
+    color: white;
 }

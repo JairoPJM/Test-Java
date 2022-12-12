@@ -85,7 +85,7 @@ function getLocation(city,state) {
             .then(response => {
                 console.log(response)
                 console.log(parseFloat(response.restaurants[0].latitude))
-                //creating 10 nearest restaurants
+                //creating 10 nearest restaurants as an Array
                 const restaurants = [
                     [{ lat: parseFloat(response.restaurants[0].latitude), lng: parseFloat(response.restaurants[0].longitude), type: "http://maps.google.com/mapfiles/kml/pal2/icon55.png"}, response.restaurants[0].restaurantName, response.restaurants[0].address, response.restaurants[0].cuisineType, response.restaurants[0].phone],
                     [{ lat: parseFloat(response.restaurants[1].latitude), lng: parseFloat(response.restaurants[1].longitude), type: "http://maps.google.com/mapfiles/kml/pal2/icon55.png" }, response.restaurants[1].restaurantName, response.restaurants[1].address, response.restaurants[1].cuisineType, response.restaurants[1].phone],
