@@ -60,3 +60,14 @@ Picture File
 Brooklynn Stevenson - Signup.html, Style2.css, Signup.js, Signup1.js, & Register.js, READ.ME work - Git Hub Project
 Minjae Cho - Amit.js, Index.html, Style.css, READ.ME work - Git Hub Project
 Jairo Marcassi - Index.html, Style.css, READ.ME work - Git Hub Project
+
+# pictures
+* Main page of the website
+![](https://user-images.githubusercontent.com/111899130/207146857-88be2cb7-030b-4a5a-97d3-7e6c2e0ab53a.PNG)
+* Page when your city and state is searched
+![](Assets/pictures/part%202.PNG)
+* Page when randomized button is clicked
+![](Assets/pictures/part%203.PNG)
+* page when you open the about us section
+![](Assets/pictures/part%204.PNG)
+
