@@ -16,8 +16,6 @@ mainPageBtn.addEventListener("click",function(){
     $('#block').removeClass('hide');
 })
 randomBtn.addEventListener("click",function(){
-    mainPageSection.hidden=true
-    aboutUsSection.hidden=true
     randomizedBtn.hidden=true
 })
 aboutUsBtn.addEventListener("click",function(){
