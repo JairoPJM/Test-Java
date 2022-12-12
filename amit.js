@@ -25,8 +25,6 @@ aboutUsBtn.addEventListener("click",function(){
     $('#block').addClass('hide');
 })
 
-var mapSection=document.querySelector("#map")
-
 $('#form').submit( function(e) {
     e.preventDefault()
     var input = $('#search').val();
