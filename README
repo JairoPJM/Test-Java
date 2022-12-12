@@ -8,4 +8,57 @@ city and state input returns 10 restaurants
 restaurants are inputted into an array
 reverse geocoded as markers onto google maps
 random button shuffles through the restaurant array to output one specific restaurant
-    
+
+
+
+# Prerequisites
+* To install this application, you will need a text editor. I recommend Visual Studio Code.
+
+#Installing
+* To install this code, download the zip file, or use GitHub's guidelines to clone the repository.#
+
+# To Execute File
+* Open in browser    
+
+# Features:
+Two HTML Files
+Index.html
+* Contains home landing page 
+* Contains active links in the navbar that will relocate you to about us, login/register, or My Account 
+* Google maps location for city and state input which returns 10 restaurants
+* Markers onto google maps by reverse geocode
+* Random button that shuffles through the restaurant araays to output one specific restaurant
+
+Signup.html
+* Contains login page that displays a 3D login/register user submit that relocates you to the home page and logs user     information to local storage when user information is submitted
+
+
+Four JavaScript Files
+Amit.js
+* Contains web api's (Openweather Geocoder, Google Maps, Restaurants near me USA)
+* Contains code for markers for google maps
+
+Signup1.js
+* Contains code for card to be 3D and give access to Login and Register
+
+Signup.js 
+Contains: * Variables, including arrays with object * Event listeners * if/else if statements * For Loops * Functions * Local Storage
+
+Register.js
+Contains: * Variables, including arrays with object * Event listeners * if/else if statements * For Loops * Functions * Local Storage
+
+Two CSS Files
+Style.css
+* Contains centering and styling for index.html list features
+
+Style2.css
+* Contains centering and styling for signup.html list features
+
+Picture File
+* Contains all pictures used for this project
+
+
+# Authors
+Brooklynn Stevenson - Signup.html, Style2.css, Signup.js, Signup1.js, & Register.js, READ.ME work - Git Hub Project
+Minjae Cho - Amit.js, Index.html, Style.css, READ.ME work - Git Hub Project
+Jairo Marcassi - Index.html, Style.css, READ.ME work - Git Hub Project
