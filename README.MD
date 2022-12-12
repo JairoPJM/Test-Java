@@ -4,6 +4,20 @@
 Generates nearest restaurants and locates the restaurants in google maps.
 Once the restaurants are located, the user can randomize one specific restaurant.
 
+# Pictures
+* Main page of the website 
+
+![](https://user-images.githubusercontent.com/111899130/207146857-88be2cb7-030b-4a5a-97d3-7e6c2e0ab53a.PNG)
+* Page when your city and state is searched
+
+![](Assets/pictures/part%202.PNG)
+* Page when randomized button is clicked
+
+![](Assets/pictures/part%203.PNG)
+* page when you open the about us section
+
+![](Assets/pictures/part%204.PNG)
+
 # User's Story
 * As a hungry user
 * I want to find the nearest restaurants around me
@@ -17,20 +31,6 @@ Once the restaurants are located, the user can randomize one specific restaurant
 
 # To Execute File
 * Open in browser   
-
-# pictures
-* Main page of the website 
-
-![](https://user-images.githubusercontent.com/111899130/207146857-88be2cb7-030b-4a5a-97d3-7e6c2e0ab53a.PNG)
-* Page when your city and state is searched
-
-![](Assets/pictures/part%202.PNG)
-* Page when randomized button is clicked
-
-![](Assets/pictures/part%203.PNG)
-* page when you open the about us section
-
-![](Assets/pictures/part%204.PNG)
 
 # Features:
 Two HTML Files
@@ -68,6 +68,9 @@ Style2.css
 
 Picture File
 * Contains all pictures used for this project
+
+#presentation
+https://docs.google.com/presentation/d/1xc8Ko6Gt9nn_pa85xhNY6yQHo_cI3fn_WpLfi63XrXs/edit?usp=sharing
 
 
 # Authors
