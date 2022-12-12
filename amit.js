@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
-=======
->>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
 var aboutUsBtn=document.querySelector("#ab")
 var randomPageSection=document.querySelector("#random-page")
 var randomBtn=document.querySelector("#random")
@@ -21,15 +14,6 @@ mainPageBtn.addEventListener("click",function(){
     mainPageSection.hidden=false
     randomizedSection.hidden=true
     randomizedBtn.hidden=true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    location.reload()
->>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
-=======
-    location.reload()
->>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
-
 })
 randomBtn.addEventListener("click",function(){
     console.log("hello")
@@ -41,30 +25,19 @@ aboutUsBtn.addEventListener("click",function(){
     console.log("H!")
     mainPageSection.hidden=true
     aboutUsSection.hidden=false
-<<<<<<< HEAD
 })
-<<<<<<< HEAD
+
 randomPageSection.addEventListener("click",function(){
     console.log("HI!")
     mainPageSection.hidden=false
     aboutUsSection.hidden=true
 })
-=======
-// randomPageSection.addEventListener("click",function(){
-//     console.log("HI!")
-//     mainPageSection.hidden=false
-//     aboutUsSection.hidden=true
-// })
->>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
 
 var mapSection=document.querySelector("#map")
-=======
     $('#randomized').empty()
-})
->>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
 
 $('#form').submit( function(e) {
-    e.preventDefault();
+    e.preventDefault()
     var input = $('#search').val();
     var inputArr = input.split(',')
     console.log(inputArr)
