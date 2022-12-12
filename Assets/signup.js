@@ -18,8 +18,7 @@ console.log('user added');
 }
 
 
-function signIn(e) {
-    e.preventDefault()
+function signIn() {
     var emails = document.getElementById('emails').value;
     var passwords = document.getElementById('passwords').value;
     for(let i=0; i < localStorage.length; i++){
@@ -28,6 +27,8 @@ function signIn(e) {
         if(emails == item.email && passwords == item.password){
             //next page
             window.alert('ok')
+            } else {
+                window.alert('invalid login')
             }
         }
     }
