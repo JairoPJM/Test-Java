@@ -31,10 +31,10 @@
             <div class="inner-box" id="card">
                 <div class="card-front">
                     <h2>LOGIN</h2>
-                    <ul id="signup"></ul>
+                    <ul id="signIn"></ul>
                     <form onsubmit="signIn()">
-                        <input type="email" class="input-box" placeholder="Your Email Id" id="emails" required>
-                        <input type="password" class="input-box" placeholder="Password" id="passwords" required>
+                        <input type="email" class="input-box" placeholder="Your Email Id" id="email-login" required>
+                        <input type="password" class="input-box" placeholder="Password" id="password-login" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -43,10 +43,11 @@
                 </div>
                     <div class="card-back">
                         <h2>REGISTER</h2>
-                    <form onsubmit="signup()">
-                        <input type="text" class="input-box" placeholder="Your Name" id="username" required>
-                        <input type="email" class="input-box" placeholder="Your Email Id" id="email" required>
-                        <input type="password" class="input-box" placeholder="Password" id="password" required>
+                    <ul id="signUp"></ul>
+                    <form onsubmit="signUp()">
+                        <input type="text" class="input-box" placeholder="Your Name" id="name" required>
+                        <input type="email" class="input-box" placeholder="Your Email Id" id="email-signup" required>
+                        <input type="password" class="input-box" placeholder="Password" id="password-signup" required>
                         <button type="submit" class="submit-btn">Submit</button>
                         <input type="checkbox"><span>Remember Me</span>
                     </form>
@@ -60,6 +61,7 @@
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="./signup1.js"></script>
     <script src="./Assets/signup.js"></script>
+    <script src="./Assets/register.js"></script>
     <script>
       $(document).foundation();
     </script>
