@@ -18,6 +18,7 @@ mainPageBtn.addEventListener("click",function(){
 })
 randomBtn.addEventListener("click",function(){
     randomizedBtn.hidden=true
+        
 })
 aboutUsBtn.addEventListener("click",function(){
     mainPageSection.hidden=true
@@ -26,6 +27,10 @@ aboutUsBtn.addEventListener("click",function(){
     $('#block').addClass('hide');
     $('#map').empty();
 })
+
+
+
+
 
 $('#form').submit( function(e) {
     e.preventDefault()
@@ -103,8 +108,15 @@ function getLocation(city,state) {
                                                 <h1><a link='address'>${restaurants[rnd][2]}</a></h1><br />
                                                 <h1>${restaurants[rnd][3]}</h1><br />
                                                 <h1><a>${restaurants[rnd][4]}</a></h1>`) 
+                                                var newR = JSON.stringify(restaurants[rnd])
+                                                localStorage.setItem('r1', newR)
+                                                console.log(newR)
+                                                
                     }
+                    
+                    
                     random.addEventListener("click", randomR)
+                    
                 const infoWindow = new google.maps.InfoWindow();
                 restaurants.forEach(([position, title, address], i) => {
                     const marker = new google.maps.Marker( {
