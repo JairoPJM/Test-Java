@@ -1,15 +1,16 @@
-//Sign up Function
-
-function signIn(e){
-    console.log("signIn")
+function signUp(e){
+    console.log("signUp")
     event.preventDefault();
 
+var name = document.getElementById('name').value;
+var email = document.getElementById('email-signup').value;
+var password = document.getElementById('password-signup').value;
+console.log("name = ", name);
+console.log("email = ", email);
+console.log("password = ", password);
 
-var email = document.getElementById('email-login').value;
-var password = document.getElementById('password-login').value;
-
-
-var user = {
+var user = { 
+    name: name,
     email: email,
     password: password,
 };
@@ -19,7 +20,7 @@ localStorage.setItem(email, json);
 console.log('user added');
 
 
-if(email=="admin@gmail.com" && password=="admin123"){
+if(name=="admin" && email=="admin@gmail.com" && password=="admin123"){
     window.location.assign("index.html");
     alert("Login Successful");
 }
@@ -31,11 +32,8 @@ else{
 
 
 
-
-
-
 // Declared variables
-var signUp = document.querySelector("#signUp");
+var signUp1 = document.querySelector("#signUp");
 
 
 
@@ -49,28 +47,7 @@ if (userInfo !== null) {
 
         var createLi = document.createElement("li");
         createLi.textContent = userInfo[i].initials + " " + userInfo[i].score;
-        signUp.appendChild(createLi);
+        signUp1.appendChild(createLi);
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
