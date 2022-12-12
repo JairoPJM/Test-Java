@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+.title-bar {
+    background: #0a0a0a;
+    color: #fefefe;
+    padding: 0.5rem;
+}
+
 .sign{
     position: relative;
     left: 700px;
