@@ -104,7 +104,10 @@ function getLocation(city,state) {
                         $('#randomized').append(`<h1>${restaurants[rnd][1]}</h1><br />
                                                 <h1><a link='address'>${restaurants[rnd][2]}</a></h1><br />
                                                 <h1>${restaurants[rnd][3]}</h1><br />
-                                                <h1><a>${restaurants[rnd][4]}</a></h1>`) 
+                                                <h1><a>${restaurants[rnd][4]}</a></h1>`)
+                        //input item to local storage
+                        var newR = JSON.stringify(restaurants[rnd])
+                        localStorage.setItem(restaurants[rnd][1], newR)
                     }
                     random.addEventListener("click", randomR)
                 const infoWindow = new google.maps.InfoWindow();
