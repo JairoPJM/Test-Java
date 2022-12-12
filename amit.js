@@ -27,6 +27,7 @@ aboutUsBtn.addEventListener("click",function(){
     console.log("H!")
     mainPageSection.hidden=true
     aboutUsSection.hidden=false
+    $('#randomized').empty()
 })
 
 $('#form').submit( function(e) {
