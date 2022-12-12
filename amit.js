@@ -29,9 +29,8 @@ aboutUsBtn.addEventListener("click",function(){
     aboutUsSection.hidden=false
     $('#randomized').empty()
 })
-
 $('#form').submit( function(e) {
-    e.preventDefault();
+    e.preventDefault()
     var input = $('#search').val();
     var inputArr = input.split(',')
     console.log(inputArr)

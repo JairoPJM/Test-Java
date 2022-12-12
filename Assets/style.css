@@ -71,6 +71,20 @@ button {
     justify-content: center;
     flex-direction: column;
 }
-.main-pic{
-    width:2000px;
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+    background-color: rgb(153, 153, 153);
+}
+.img-size {
+    width: 70vw;
+    box-shadow: 8px 8px 8px black;
+    opacity: 95%;
+}
+.contain {
+    display: flex;
+    justify-content: center;
 }
