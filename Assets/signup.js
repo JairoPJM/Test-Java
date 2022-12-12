@@ -18,21 +18,19 @@ console.log('user added');
 }
 
 
-function signIn() {
-    var emails = document.getElementById('email').value;
-    var passwords = document.getElementById('password').value;
+function signIn(e) {
+    e.preventDefault()
+    var emails = document.getElementById('emails').value;
+    var passwords = document.getElementById('passwords').value;
     for(let i=0; i < localStorage.length; i++){
         var item = JSON.parse(localStorage.getItem(localStorage.key(i)))
+        console.log(item)
         if(emails == item.email && passwords == item.password){
             //next page
             window.alert('ok')
-        }else {
-            //password failed page
-            window.alert('wrong password')
-            return
+            }
         }
     }
-}
 
 
 
