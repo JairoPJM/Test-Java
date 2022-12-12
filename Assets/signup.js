@@ -30,43 +30,6 @@ else{
 }
 
 
-function signIn() {
-    var emails = document.getElementById('emails').value;
-    var passwords = document.getElementById('passwords').value;
-    for(let i=0; i < localStorage.length; i++){
-        var item = JSON.parse(localStorage.getItem(localStorage.key(i)))
-        console.log(item)
-    }
-        if(emails == item.email && passwords == item.password){
-        //next page
-            window.alert('ok')
-            location.replace(index.html)
-        } else {
-            window.alert('invalid login')
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
