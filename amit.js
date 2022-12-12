@@ -1,3 +1,39 @@
+
+var aboutUsBtn=document.querySelector("#ab")
+var randomPageSection=document.querySelector("#random-page")
+var randomBtn=document.querySelector("#random")
+var aboutUsSection=document.querySelector(".about-us-section")
+var mainPageSection=document.querySelector(".main-page")
+var mainPageBtn=document.querySelector("#home-page")
+var randomizedSection=document.querySelector("#randomized")
+var randomizedBtn=document.querySelector("#random")
+var randomizedPageSection=document.querySelector("#randomized-page-section")
+
+mainPageBtn.addEventListener("click",function(){
+    console.log("hey")
+    aboutUsSection.hidden=true
+    mainPageSection.hidden=false
+    randomizedSection.hidden=true
+    randomizedBtn.hidden=true
+
+})
+randomBtn.addEventListener("click",function(){
+    console.log("hello")
+    mainPageSection.hidden=true
+    aboutUsSection.hidden=true
+    randomizedBtn.hidden=true
+})
+aboutUsBtn.addEventListener("click",function(){
+    console.log("H!")
+    mainPageSection.hidden=true
+    aboutUsSection.hidden=false
+})
+randomPageSection.addEventListener("click",function(){
+    console.log("HI!")
+    mainPageSection.hidden=false
+    aboutUsSection.hidden=true
+})
+
 var mapSection=document.querySelector("#map")
 
 $('#form').submit( function(e) {

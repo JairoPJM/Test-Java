@@ -19,7 +19,9 @@
   <div class="top-bar-left">
     <ul class="menu" data-responsive-menu="accordion">
       <li class="menu-text">NeighborhoodEats</li>
-      <li><a href="aboutus.html">About Us</a></li>
+      <li><a id="home-page">Home Page</a></li>
+      <li><a id="random-page">Randomized page</a></li>
+      <li><a id="ab">About Us</a></li>
     </ul>
   </div>
   <div class="top-bar-right">
@@ -30,11 +32,12 @@
     </ul>
   </div>
 </div>
-<!-- /Navigation -->
-
 <br>
+
+
+
 <!-- Main header -->
-<div class="row">
+<div class="row main-page">
   <div class="medium-8 large-6 columns">
     <h1>Find Restaurants</h1>
     <p class="subheader">Enter a city and state to find the nearest popular Restaurants!</p>
@@ -58,31 +61,65 @@
     </div>
   </div>
 </div>
-<!-- -->
-  <div id="block">
-<!-- add picture -->
-  </div>
 
-  <div id="map"hidden></div>
-  <div class= "column large-centered randomCon hide" id="randomizer">
-  <button class="rbtn" id="random">Randomize</button>
-  <div id="randomized" class="containR">
-  </div>
-  </div>
-  <footer class="footer">
-    <article class="grid-container">
-      <div class="row column">
+<div class="about-us-section" hidden>
+  <div class="row small-up-1 medium-up-2 large-up- container">
+    <div class="column box">
+      <div class="callout">
+        <h3><strong> Why this page was made?</strong></h3>
+        <p class="lead">This page was made for the fact of never being able to pick exactly where to eat. I never had the issue of being a picky eater but deciding what to eat was the problem</p>
+        </p>
       </div>
-    </article>
-  </footer>
+    </div>
+    <div class="column">
+        <p><img src="Assets/pictures/14133749-hungry-man-thinking-of-food.webp" alt="Picture of person thinking"></p>
+    </div>
+    <div class="column">
+        <p><img src="Assets/pictures/people-cozy-cafe-coffee-shop-interior-customers-waitress-vector-illustration_169479-422.webp" alt="image of a planet called Pegasi B"></p>
+    </div>
+    <div class="column box">
+      <div class="callout">
+        <h3><strong> Take a date to the next level with us</strong></h3>
+        <p class="lead">We have gathered the reputation from thousands of satisfied customers that trust our data. And love to eat the restaurants we choose. We don't just give you completely random places.
+        We look for restaurants that are above par </p>
+      </div>
+    </div>
+    <div class="column box">
+      <div class="callout">
+        <h2><strong> Why you should sell your home with us!</strong></h2>
+        <p class="lead">We have gathered the reputation from thousands of satisfied customers that trust our data. And love to buy houses on our site. Because feeling safe is the most important aspect for home owners.</p>
+      </div>
+    </div>
+  </div>
 </div>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script src="amit.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=&v=weekly"
-defer></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
-</html>
+
+<!-- map -->
+<div id="map"hidden></div>
+<!-- -->
+<div id="block">
+  <!-- add picture -->
+    </div>
+    <!-- randomized button output -->
+    <div class= "column large-centered randomCon hide" id="randomizer">
+    <button class="rbtn" id="random">Randomize</button>
+    <div id="randomized" class="containR"><P>hello</P>
+    </div>
+    </div>
+    <footer class="footer">
+      <article class="grid-container">
+        <div class="row column">
+        </div>
+      </div>
+      </article>
+    </footer>
+  </div>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+      <script src="amit.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=&v=weekly"
+  defer></script>
+      <script>
+        $(document).foundation();
+      </script>
+    </body>
+  </html>
