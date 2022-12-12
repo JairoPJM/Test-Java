@@ -9,6 +9,7 @@ var randomizedBtn=document.querySelector("#random")
 var randomizedPageSection=document.querySelector("#randomized-page-section")
 
 mainPageBtn.addEventListener("click",function(){
+    location.reload()
     aboutUsSection.hidden=true
     mainPageSection.hidden=false
     randomizedSection.hidden=true
@@ -18,6 +19,7 @@ mainPageBtn.addEventListener("click",function(){
 })
 randomBtn.addEventListener("click",function(){
     randomizedBtn.hidden=true
+    $('#map').empty();
 })
 aboutUsBtn.addEventListener("click",function(){
     mainPageSection.hidden=true
