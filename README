@@ -1,20 +1,18 @@
 # NEIGHBORHOOD EATS
 
 ## DESCRIPTION
-API - Openweather Geocoder, Google Maps, Restaurants near me USA
-input -> geocode -> latitude & longitude
-creates google maps location
-city and state input returns 10 restaurants
-restaurants are inputted into an array
-reverse geocoded as markers onto google maps
-random button shuffles through the restaurant array to output one specific restaurant
+Generates nearest restaurants and locates the restaurants in google maps.
+Once the restaurants are located, the user can randomize one specific restaurant.
 
-
+# User's Story
+* As a hungry user
+* I want to find the nearest restaurants around me
+* Then I want to randomly select a recommended restaurant
 
 # Prerequisites
 * To install this application, you will need a text editor. I recommend Visual Studio Code.
 
-#Installing
+# Installing
 * To install this code, download the zip file, or use GitHub's guidelines to clone the repository.#
 
 # To Execute File
@@ -27,7 +25,7 @@ Index.html
 * Contains active links in the navbar that will relocate you to about us, login/register, or My Account 
 * Google maps location for city and state input which returns 10 restaurants
 * Markers onto google maps by reverse geocode
-* Random button that shuffles through the restaurant araays to output one specific restaurant
+* Random button that shuffles through the restaurant arrays to output one specific restaurant
 
 Signup.html
 * Contains login page that displays a 3D login/register user submit that relocates you to the home page and logs user     information to local storage when user information is submitted
