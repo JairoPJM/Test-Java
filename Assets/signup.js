@@ -1,7 +1,7 @@
 //Sign up Function
 
 function signup(e){
-    e.preventDefault();
+    event.preventDefault();
 
 
 var email = document.getElementById('email').value;
