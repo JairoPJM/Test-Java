@@ -24,6 +24,7 @@ aboutUsBtn.addEventListener("click",function(){
     aboutUsSection.hidden=false
     $('#randomized').empty();
     $('#block').addClass('hide');
+    $('#map').empty();
 })
 
 $('#form').submit( function(e) {
