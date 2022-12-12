@@ -24,12 +24,13 @@ function signIn() {
     for(let i=0; i < localStorage.length; i++){
         var item = JSON.parse(localStorage.getItem(localStorage.key(i)))
         console.log(item)
+    }
         if(emails == item.email && passwords == item.password){
-            //next page
+        //next page
             window.alert('ok')
-            } else {
-                window.alert('invalid login')
-            }
+            location.replace(index.html)
+        } else {
+            window.alert('invalid login')
         }
     }
 
