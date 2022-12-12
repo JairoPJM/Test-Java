@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
+=======
+>>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
 var aboutUsBtn=document.querySelector("#ab")
 var randomPageSection=document.querySelector("#random-page")
 var randomBtn=document.querySelector("#random")
@@ -19,9 +22,13 @@ mainPageBtn.addEventListener("click",function(){
     randomizedSection.hidden=true
     randomizedBtn.hidden=true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     location.reload()
 >>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
+=======
+    location.reload()
+>>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
 
 })
 randomBtn.addEventListener("click",function(){
@@ -34,6 +41,7 @@ aboutUsBtn.addEventListener("click",function(){
     console.log("H!")
     mainPageSection.hidden=true
     aboutUsSection.hidden=false
+<<<<<<< HEAD
 })
 <<<<<<< HEAD
 randomPageSection.addEventListener("click",function(){
@@ -50,6 +58,10 @@ randomPageSection.addEventListener("click",function(){
 >>>>>>> 2d04ca6003e978d64bf2a09ab7b5912544e56bd0
 
 var mapSection=document.querySelector("#map")
+=======
+    $('#randomized').empty()
+})
+>>>>>>> 73884be4e2e25a6d6a6c5096ddccf77f3bf97fb0
 
 $('#form').submit( function(e) {
     e.preventDefault();
@@ -73,7 +85,7 @@ function getLocation(city,state) {
     var city = inputArr[0];
     var state = inputArr[1];
     var country = '';
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ city +','+ state +','+country + '&limit=5&appid=' + key)
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q='+ city +','+ state +','+country + '&limit=5&appid=' + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data)
@@ -119,6 +131,7 @@ function getLocation(city,state) {
                 //randomizing restaurants
                     var random = document.getElementById('random')
                     function randomR(){
+                        $('#map').addClass('hide')
                         $('#randomized').empty()
                         var rnd = Math.floor(Math.random()*7) + 0
                         console.log(rnd)
