@@ -68,7 +68,7 @@
     width: 100%;
     background: transparent;
     border: 1px solid #fff;
-    margin: 6px 15px; /*was 6px 0;*/
+    margin: px 15px; /*was 6px 0;*/
     height: 32px;
     border-radius: 20px;
     padding: 0px 10px;
@@ -82,7 +82,7 @@ input[type=checkbox]{
     box-sizing: border-box;
     padding: 0;
     position: absolute;
-    left:-40px;
+    
 } 
 
 input[type=radio]{
