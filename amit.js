@@ -9,32 +9,23 @@ var randomizedBtn=document.querySelector("#random")
 var randomizedPageSection=document.querySelector("#randomized-page-section")
 
 mainPageBtn.addEventListener("click",function(){
-    console.log("hey")
     aboutUsSection.hidden=true
     mainPageSection.hidden=false
     randomizedSection.hidden=true
     randomizedBtn.hidden=true
+    $('#block').removeClass('hide');
 })
 randomBtn.addEventListener("click",function(){
-    console.log("hello")
-    mainPageSection.hidden=true
-    aboutUsSection.hidden=true
     randomizedBtn.hidden=true
 })
 aboutUsBtn.addEventListener("click",function(){
-    console.log("H!")
     mainPageSection.hidden=true
     aboutUsSection.hidden=false
-})
-
-randomPageSection.addEventListener("click",function(){
-    console.log("HI!")
-    mainPageSection.hidden=false
-    aboutUsSection.hidden=true
+    $('#randomized').empty();
+    $('#block').addClass('hide');
 })
 
 var mapSection=document.querySelector("#map")
-    $('#randomized').empty()
 
 $('#form').submit( function(e) {
     e.preventDefault()

@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container{
+.container1{
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
@@ -35,7 +35,7 @@
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgb(2, 120, 255), rgb(2, 120, 255)), url(./pictures/images.jpeg);
+    background-image: linear-gradient(rgb(2, 120, 255), rgb(2, 120, 255));
     padding: 55px;
     box-sizing: border-box;
     backface-visibility: hidden;
@@ -63,7 +63,7 @@
     box-sizing: border-box;
     outline: none;
     text-align: center;
-    color: #fff;
+    color: black;
 }
 
 ::placeholder{

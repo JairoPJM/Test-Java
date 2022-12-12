@@ -3,26 +3,20 @@
 <head>
     <title>Login And Registration Form</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="./Assets/style.css">
     <link rel="stylesheet" href="./Assets/style2.css"> 
 </head>
 
 <body>
   
 
-    <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
-      
-      <div class="top-bar" id="realEstateMenu">
-        <div class="top-bar-left">
-          <ul class="menu" data-responsive-menu="accordion">
-            <li class="menu-text">NeighborhoodEats</li>
-            <li><a href="index.html">Home page</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-          </ul>
-        </div>
+  
+  <div class="top-bar" id="realEstateMenu">
+    <div class="top-bar-left">
+      <ul class="menu" data-responsive-menu="accordion">
+        <li class="menu-text">NeighborhoodEats</li>
+        <li><a id="home-page" href="index.html">Home Page</a></li>
+      </ul>
+    </div>
         <div class="top-bar-right">
           <ul class="menu">
             <li><a href="signup.html">My Account</a></li>
@@ -31,63 +25,7 @@
           </ul>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <br>
     <div class="container1">
         <div class="card">
             <div class="inner-box" id="card">
@@ -119,10 +57,12 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="./signup1.js"></script>
-
-
-<script src="./Assets/signup.js"></script>
+    <script src="./Assets/signup.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 
 </body>
 </html>
