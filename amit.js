@@ -14,6 +14,7 @@ mainPageBtn.addEventListener("click",function(){
     randomizedSection.hidden=true
     randomizedBtn.hidden=true
     $('#block').removeClass('hide');
+    $('#map').empty();
 })
 randomBtn.addEventListener("click",function(){
     randomizedBtn.hidden=true
@@ -23,9 +24,8 @@ aboutUsBtn.addEventListener("click",function(){
     aboutUsSection.hidden=false
     $('#randomized').empty();
     $('#block').addClass('hide');
+    $('#map').empty();
 })
-
-var mapSection=document.querySelector("#map")
 
 $('#form').submit( function(e) {
     e.preventDefault()
