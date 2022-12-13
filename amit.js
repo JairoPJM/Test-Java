@@ -111,12 +111,12 @@ function getLocation(city,state) {
                                                 <h1><a>${restaurants[rnd][4]}</a></h1>`)
                         //input item to local storage
                         var newR = JSON.stringify(restaurants[rnd])
-                        localStorage.setItem(restaurants[rnd][1], "newR")
+                        localStorage.setItem(restaurants[rnd][1], newR)
                         console.log(newR)
                         
                     }
                     function printRandom(){
-                        var restIn=JSON.parse(localStorage.getItem(restaurants[rnd][1],"newR"))
+                        var restIn=JSON.parse(localStorage.getItem(restaurants[rnd][1], newR))
                         console.log(restIn)
                     }
                     
